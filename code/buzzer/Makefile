@@ -3,9 +3,9 @@ LD := arm-linux-ld
 OBJCOPY := arm-linux-objcopy
 CFLAGS :=
 
-led.bin:start.o main.o
-	$(LD) -Ttext 0x20000000 $^ -o led.elf
-	$(OBJCOPY) -O binary led.elf $@
+buzzer.bin:start.o main.o
+	$(LD) -Ttext 0x20000000 $^ -o buzzer.elf
+	$(OBJCOPY) -O binary buzzer.elf $@
 
 %.o:%.s
 	$(CC) -c -o $@ $<

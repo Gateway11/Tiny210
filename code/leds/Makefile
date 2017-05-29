@@ -1,12 +1,17 @@
 CC := arm-linux-gcc
 LD := arm-linux-ld
 OBJCOPY := arm-linux-objcopy
+CFLAGS :=
 
-led.bin:led.s led.c
-	$(CC) -c -o led.o $<
-	$(CC) -c -o led_c.o led.c
-	$(LD) -Ttext 0x20000000 led.o led_c.o -o led.elf
+led.bin:led.o main.o
+	$(LD) -Ttext 0x20000000 $^ -o led.elf
 	$(OBJCOPY) -O binary led.elf $@
+
+%.o:%.s
+	$(CC) -c -o $@ $<
+
+%.o:%.c
+	$(CC) -c -o $@ $<
 
 clean:
 	rm -f *.o *.elf *.bin

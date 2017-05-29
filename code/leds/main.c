@@ -4,6 +4,6 @@
 int main(void){
     GPJCOM = 0x00001111;
     GPJDAT = 0x0;
-    while (1);
+    while(1);
     return 0;
 }

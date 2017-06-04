@@ -38,3 +38,4 @@
     下载                        sudo apt-get install nfs-kernel-server
     配置                        sudo echo '/home/daixiang/rootfs    *(rw,sync,no_subtree_check)' > /etc/exports
     启动                        sudo /etc/init.d/nfs-sernel-server restart
+    setenv bootargs root=/dev/nfs nfsroot=192.168.10.110:home/daixiang/rootfs ip=192.168.10.122 init=/linuxrc console=ttySAC0,115200

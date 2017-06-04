@@ -8,6 +8,6 @@
     strip                       剔除符号表
     strings                     查看文件中定义的字符串
     objcopy
-    objdump
+    objdump -d/-D
     addr2line
 

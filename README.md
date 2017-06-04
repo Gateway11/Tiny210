@@ -17,5 +17,6 @@
     setenv/saveenv              设置/保存环境变量(setenv ipaddr 192.168.10.110)
     tftp                        (tftp 20008000 uImage)
     md                          
-
-
+    nand erase/write/read       (nand read 0x21000000 0x100000 1024)
+    bootm
+    go

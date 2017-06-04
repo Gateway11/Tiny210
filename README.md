@@ -11,3 +11,11 @@
     objdump -d/-D
     addr2line
 
+### u-boot命令
+
+    print                       查看u-boot环境变量
+    setenv/saveenv              设置/保存环境变量(setenv ipaddr 192.168.10.110)
+    tftp                        (tftp 20008000 uImage)
+    md                          
+
+

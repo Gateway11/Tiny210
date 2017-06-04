@@ -18,7 +18,7 @@
     tftp                        (tftp 20008000 uImage)
     md                          
     nand erase/write/read       (nand read 0x21000000 0x100000 1024)
-    bootm                       (bootm 20000000)
+    bootm                       (bootm 20008000)
     go
 
 ### 启动参数
@@ -26,7 +26,7 @@
     root=                       根文件系统在哪个设备,设备信息(ram,NFS,flash)
     init=                       内核启动后第一个程序
 
-    uImage(内核)                0x20000000
-    initrd(文件系统)            0x21000000
+    uImage(内核)                tftp 0x20008000 uImage 
+    initrd.img.gz(文件系统)     tftp 0x21000000 initrd.img.gz
     setenv bootargs root=/dev/ram initrd=0x21000000,0x800000 init=/linuxrc console=ttySAC0,115200
         

@@ -30,3 +30,11 @@
     initrd.img.gz(文件系统)     tftp 0x21000000 initrd.img.gz
     setenv bootargs root=/dev/ram initrd=0x21000000,8M init=/linuxrc console=ttySAC0,115200
     bootm 0x20008000
+
+#### NFS文件系统
+
+    解压已有的文件系统          gunzip initrd.img.gz
+    挂载到一个目录              mount -t ext4 initrd.img /home/daixiang/rootfs
+    下载                        sudo apt-get install nfs-kernel-server
+    配置                        sudo echo '/home/daixiang/rootfs    *(rw,sync,no_subtree_check)' > /etc/exports
+    启动                        sudo /etc/init.d/nfs-sernel-server restart

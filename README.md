@@ -43,6 +43,8 @@
 
 #### busybox
 
-    make memuconfig;make
     make defconfig;make
     make CONFIG_PREFIX=./busybox install
+
+    sudo apt-get install libncurses*
+    make memuconfig;make

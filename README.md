@@ -20,6 +20,7 @@
     nand erase/write/read       (nand read 0x21000000 0x100000 1024)
     bootm                       (bootm 0x20008000)
     go
+    >OK
 
 #### 启动参数
     

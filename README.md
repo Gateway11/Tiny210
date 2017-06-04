@@ -2,7 +2,7 @@
 
 #### 工具集介绍
     
-    readelf -h / file           查看可执行文件头信息(readdlf -d linuxrc | grep NEEDED)
+    readelf -h / file           查看可执行文件头信息(readelf -d linuxrc | grep NEEDED)
     size                        打印相关信息
     nm                          同上
     strip                       剔除符号表

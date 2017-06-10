@@ -48,3 +48,10 @@
 
     sudo apt-get install libncurses*
     make memuconfig;make
+
+#### etc 
+    fstab
+    inittab                     系统启动项
+    profile                     环境变量
+
+#### Linux编译

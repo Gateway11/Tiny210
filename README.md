@@ -56,6 +56,22 @@
 
 #### Linux编译
 
+    1. 清除原有配置与中间文件
+        x86: make mrproper
+        arm: make mrproper ARCH=arm
+
+    2. 配置内核
+        x86: make menuconfig
+        arm: make menuconfig ARCH=arm
+
+    3. 创建依赖
+        x86: make dep
+        arm: make dep ARCH=arm CROSS_COMPILE=arm-linux-
+
+    4. 编译内核
+        x86: make zbImage
+        arm: make zImage ARCH=arm CROSS_COMPILE=arm-linux-
+
 #### MMU(地址转换)
         
                                     线性地址
